@@ -25,7 +25,7 @@ const products = [
     name: "Elegant Formal Shoes",
     price: 500,
     category: "formal",
-    image: "assets/shoe4.jpg"
+    image: "assets/file_00000000a94c81f4982b62931c167f68.png"
   },
   {
     id: 5,
