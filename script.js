@@ -32,7 +32,7 @@ const products = [
     name: "Fashion Sneakers",
     price: 480,
     category: "sneakers",
-    image: "assets/shoe5.jpg"
+    image: "assets/https://github.com/1DANNY2/www.dle.shoe/blob/main/assets/file_00000000aa248210ae4ba1308363ccee.png"
   },
   {
     id: 6,
