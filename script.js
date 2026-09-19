@@ -1,12 +1,46 @@
-const products=[
-{id:1,name:"Air Red Runner",cat:"sneakers",price:750,old:850,tag:"BEST SELLER",icon:"👟",new:true},
-{id:2,name:"Classic Street White",cat:"casual",price:500,old:600,tag:"POPULAR",icon:"👟",new:false},
-{id:3,name:"Urban Black Trainer",cat:"sneakers",price:480,old:550,tag:"NEW",icon:"🥾",new:true},
-{id:4,name:"Executive Black",cat:"formal",price:650,old:750,tag:"SMART",icon:"👞",new:false},
-{id:5,name:"Sport Flex Pro",cat:"sports",price:700,old:800,tag:"SPORT",icon:"👟",new:true},
-{id:6,name:"Everyday Canvas",cat:"casual",price:380,old:450,tag:"VALUE",icon:"👟",new:false},
-{id:7,name:"Red Power Trainer",cat:"sports",price:600,old:680,tag:"HOT",icon:"👟",new:true},
-{id:8,name:"Classic Brown Formal",cat:"formal",price:550,old:650,tag:"CLASSIC",icon:"👞",new:false}
+const products = [
+  {
+    id: 1,
+    name: "Classic Sneakers",
+    price: 450,
+    category: "sneakers",
+    image: "assets/shoe1.jpg"
+  },
+  {
+    id: 2,
+    name: "Premium Casual Shoes",
+    price: 380,
+    category: "casual",
+    image: "assets/shoe2.jpg"
+  },
+  {
+    id: 3,
+    name: "Sport Running Shoes",
+    price: 400,
+    category: "sports",
+    image: "assets/shoe3.jpg"
+  },
+  {
+    id: 4,
+    name: "Elegant Formal Shoes",
+    price: 500,
+    category: "formal",
+    image: "assets/shoe4.jpg"
+  },
+  {
+    id: 5,
+    name: "Fashion Sneakers",
+    price: 480,
+    category: "sneakers",
+    image: "assets/shoe5.jpg"
+  },
+  {
+    id: 6,
+    name: "Everyday Casual Shoes",
+    price: 750,
+    category: "casual",
+    image: "assets/shoe6.jpg"
+  }
 ];
 let cart=JSON.parse(localStorage.getItem("dannyCart")||"[]");
 let currency=localStorage.getItem("dannyCurrency")||"K";
