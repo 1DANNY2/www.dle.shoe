@@ -46,14 +46,39 @@ let cart=JSON.parse(localStorage.getItem("dannyCart")||"[]");
 let currency=localStorage.getItem("dannyCurrency")||"K";
 
 function money(n){return currency+n.toLocaleString()}
-function renderProducts(list=products, target="productGrid"){
- const el=document.getElementById(target); if(!el)return;
- el.innerHTML=list.map(p=>`<article class="product">
-   <div class="product-img">${p.icon}</div>
-   <div class="product-info"><span class="tag">${p.tag}</span><h3>${p.name}</h3>
-   <div><span class="price">${money(p.price)}</span><span class="old">${money(p.old)}</span></div>
-   <div class="product-actions"><button onclick="addToCart(${p.id})" class="add">Add to Cart</button><button onclick="quickOrder(${p.id})">Order</button></div></div>
- </article>`).join("");
+function renderProducts(list = products, target = "productGrid") {
+  const el = document.getElementById(target);
+  if (!el) return;
+
+  el.innerHTML = list.map(p => `
+    <article class="product">
+
+      <div class="product-img">
+        <img src="${p.image}" alt="${p.name}">
+      </div>
+
+      <div class="product-info">
+        <span class="tag">${p.category}</span>
+
+        <h3>${p.name}</h3>
+
+        <div>
+          <span class="price">${money(p.price)}</span>
+        </div>
+
+        <div class="product-actions">
+          <button onclick="addToCart(${p.id})" class="add">
+            Add to Cart
+          </button>
+
+          <button onclick="quickOrder(${p.id})">
+            Order
+          </button>
+        </div>
+
+      </div>
+    </article>
+  `).join("");
 }
 function addToCart(id){const p=products.find(x=>x.id===id);let item=cart.find(x=>x.id===id);if(item)item.qty++;else cart.push({id,qty:1});saveCart();toast(p.name+" added to cart");}
 function saveCart(){if(document.getElementById("saveCartToggle")?.checked!==false)localStorage.setItem("dannyCart",JSON.stringify(cart));updateCart()}
