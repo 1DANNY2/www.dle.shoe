@@ -18,7 +18,7 @@ const products = [
     name: "Sport Running Shoes",
     price: 400,
     category: "sports",
-    image: "assets/shoe3.jpg"
+    image: "assets/file_0000000080f08210b78abcbbccb5d0c8.png"
   },
   {
     id: 4,
