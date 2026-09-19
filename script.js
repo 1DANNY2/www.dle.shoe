@@ -11,7 +11,7 @@ const products = [
     name: "Premium Casual Shoes",
     price: 380,
     category: "casual",
-    image: "assets/shoe2.jpg"
+    image: "assets/file_000000006198820a81bf3ecc45e4829a.png"
   },
   {
     id: 3,
