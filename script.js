@@ -39,7 +39,7 @@ const products = [
     name: "Everyday Casual Shoes",
     price: 750,
     category: "casual",
-    image: "assets/shoe6.jpg"
+    image: "assets/file_00000000cf7481f4a3643a95aaf7eeb3.png"
   }
 ];
 let cart=JSON.parse(localStorage.getItem("dannyCart")||"[]");
