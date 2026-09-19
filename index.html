@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Danny's Shoe Store — quality shoes, affordable prices, delivery across Zambia.">
+  <title>Danny's Shoe Store | Quality Footwear in Zambia</title>
+  <link rel="icon" href="assets/store-cover.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="topbar">
+    <div>✉️ <a href="mailto:drldanny@gmail.com">drldanny@gmail.com</a></div>
+    <div>ⓕ AngelDanny Liche</div>
+    <div>💬 <a href="https://wa.me/260977388313" target="_blank">0977388313</a></div>
+    <div class="top-right"><span>🚚 Free Delivery</span><span>🛡️ Secure Payments</span></div>
+  </div>
+
+  <header class="header">
+    <a class="brand" href="#home" aria-label="Danny's Shoe Store home">
+      <img src="assets/store-cover.png" alt="Danny's Shoe Store logo">
+      <span>Danny's <b>Shoe Store</b></span>
+    </a>
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    <nav id="mainNav">
+      <a class="active" href="#home">Home</a>
+      <a href="#shop">Shop</a>
+      <a href="#new">New Arrivals</a>
+      <a href="#offers">Offers</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+      <button class="icon-btn" onclick="openSearch()" aria-label="Search">⌕</button>
+      <button class="cart-btn" onclick="openCart()" aria-label="Shopping cart">🛒 <span id="cartCount">0</span></button>
+      <button class="settings-btn" onclick="openSettings()">⚙</button>
+    </nav>
+  </header>
+
+  <main id="home">
+    <section class="hero">
+      <img src="assets/store-cover.png" alt="Danny's Shoe Store promotional cover">
+      <div class="hero-overlay">
+        <span class="eyebrow">WELCOME TO</span>
+        <h1>DANNY'S <span>SHOE STORE</span></h1>
+        <p>Trendy Shoes &nbsp;|&nbsp; Quality Products &nbsp;|&nbsp; Affordable Prices</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="#shop">SHOP NOW →</a>
+          <a class="btn ghost" href="#booking">BOOK A VISIT</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="benefits">
+      <div><b>🏅 100% Original</b><small>Quality products</small></div>
+      <div><b>🚚 Fast Delivery</b><small>Across Zambia</small></div>
+      <div><b>🛡️ Secure Payments</b><small>Mobile Money & Bank Transfer</small></div>
+      <div><b>🎧 24/7 Support</b><small>We're always here</small></div>
+    </section>
+
+    <section id="shop" class="section">
+      <div class="section-head">
+        <div><span class="eyebrow red">OUR COLLECTION</span><h2>Popular Choices</h2></div>
+        <div class="filters">
+          <button class="filter active" data-cat="all">All</button>
+          <button class="filter" data-cat="sneakers">Sneakers</button>
+          <button class="filter" data-cat="formal">Formal</button>
+          <button class="filter" data-cat="casual">Casual</button>
+          <button class="filter" data-cat="sports">Sports</button>
+        </div>
+      </div>
+      <div id="productGrid" class="product-grid"></div>
+    </section>
+
+    <section id="new" class="section alt">
+      <div class="section-head"><div><span class="eyebrow red">JUST IN</span><h2>New Arrivals</h2></div></div>
+      <div id="newGrid" class="product-grid"></div>
+    </section>
+
+    <section id="offers" class="offer-banner">
+      <div><span class="eyebrow">SPECIAL OFFERS</span><h2>Step Into Greatness</h2><p>Check our latest prices and limited offers before they sell out.</p></div>
+      <a class="btn primary" href="#shop">VIEW OFFERS →</a>
+    </section>
+
+    <section id="about" class="section about">
+      <div class="about-image"><img src="assets/store-cover.png" alt="Danny's Shoe Store"></div>
+      <div>
+        <span class="eyebrow red">ABOUT US</span>
+        <h2>More than shoes — we help you step with confidence.</h2>
+        <p><strong>Danny's Shoe Store</strong> is a customer-focused footwear store built to make stylish, dependable shoes easier to find at fair prices.</p>
+        <p>We offer sneakers, sports shoes, casual footwear and smart/formal styles for everyday life, work, events and active lifestyles. We focus on quality products, clear pricing, friendly service and convenient ordering.</p>
+        <div class="about-points">
+          <div>✓ Carefully selected footwear</div><div>✓ Affordable prices in Zambian Kwacha</div>
+          <div>✓ Delivery options across Zambia</div><div>✓ Easy WhatsApp ordering & support</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="booking" class="section booking">
+      <div class="section-head"><div><span class="eyebrow red">BOOKING</span><h2>Book a Visit / Fitting</h2><p>Reserve a convenient time to visit, browse or arrange a fitting.</p></div></div>
+      <form id="bookingForm" class="form-card">
+        <div class="form-grid">
+          <label>Full name<input name="name" required placeholder="Your name"></label>
+          <label>Phone number<input name="phone" required placeholder="0977..."></label>
+          <label>Date<input type="date" name="date" required></label>
+          <label>Time<input type="time" name="time" required></label>
+          <label>Service<select name="service"><option>Browse & shop</option><option>Shoe fitting</option><option>Bulk/wholesale enquiry</option><option>Order collection</option></select></label>
+          <label>Number of people<input type="number" name="people" min="1" value="1"></label>
+        </div>
+        <label>Message<textarea name="message" rows="4" placeholder="Tell us what you are looking for..."></textarea></label>
+        <button class="btn primary" type="submit">BOOK NOW</button>
+        <p class="form-note">Your booking request opens WhatsApp so you can confirm directly with Danny's Shoe Store.</p>
+      </form>
+    </section>
+
+    <section id="contact" class="section contact">
+      <div>
+        <span class="eyebrow red">CONTACT US</span><h2>We're ready to help.</h2>
+        <p>Have a question about sizes, availability, delivery or payment? Contact us directly.</p>
+      </div>
+      <div class="contact-cards">
+        <a href="mailto:drldanny@gmail.com">✉️ <b>Email</b><span>drldanny@gmail.com</span></a>
+        <a href="https://wa.me/260977388313" target="_blank">💬 <b>WhatsApp</b><span>0977388313</span></a>
+        <div>ⓕ <b>Facebook</b><span>AngelDanny Liche</span></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div><h3>Danny's Shoe Store</h3><p>Trendy shoes. Quality products. Affordable prices.</p></div>
+    <div><h4>Quick Links</h4><a href="#shop">Shop</a><a href="#about">About</a><a href="#booking">Booking</a><a href="#contact">Contact</a></div>
+    <div><h4>Customer Care</h4><a href="#contact">Delivery</a><a href="#contact">Payments</a><a href="#contact">Returns</a><button onclick="openSettings()">Settings</button></div>
+    <div><h4>Contact</h4><p>✉️ drldanny@gmail.com</p><p>💬 0977388313</p></div>
+  </footer>
+  <div class="copyright">© 2026 Danny's Shoe Store. All rights reserved.</div>
+
+  <!-- Cart -->
+  <aside id="cartPanel" class="drawer">
+    <div class="drawer-head"><h2>Your Cart</h2><button onclick="closeCart()">×</button></div>
+    <div id="cartItems"></div>
+    <div class="cart-total"><span>Total</span><strong id="cartTotal">K0</strong></div>
+    <button class="btn primary full" onclick="checkout()">CHECKOUT ON WHATSAPP</button>
+    <button class="btn secondary full" onclick="closeCart()">CONTINUE SHOPPING</button>
+  </aside>
+  <div id="overlay" class="overlay" onclick="closeAll()"></div>
+
+  <!-- Search -->
+  <div id="searchModal" class="modal"><div class="modal-box"><button class="close" onclick="closeSearch()">×</button><h2>Search products</h2><input id="searchInput" oninput="searchProducts()" placeholder="Search shoes..."><div id="searchResults"></div></div></div>
+
+  <!-- Settings -->
+  <div id="settingsModal" class="modal"><div class="modal-box settings"><button class="close" onclick="closeSettings()">×</button><h2>Settings</h2>
+    <label class="setting-row"><span>Dark mode</span><input id="darkToggle" type="checkbox" onchange="toggleDark(this.checked)"></label>
+    <label class="setting-row"><span>Save cart on this device</span><input id="saveCartToggle" type="checkbox" checked></label>
+    <label class="setting-row"><span>Currency</span><select id="currency"><option value="K">ZMW (K)</option><option value="$">USD ($)</option></select></label>
+    <button class="btn primary full" onclick="saveSettings()">SAVE SETTINGS</button>
+  </div></div>
+
+  <div id="toast" class="toast"></div>
+  <script src="script.js"></script>
+</body>
+</html>
