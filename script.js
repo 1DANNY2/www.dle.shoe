@@ -32,7 +32,7 @@ const products = [
     name: "Fashion Sneakers",
     price: 480,
     category: "sneakers",
-    image: "assets/
+    image: "assets/file_00000000aa248210ae4ba1308363ccee.png"
   },
   {
     id: 6,
