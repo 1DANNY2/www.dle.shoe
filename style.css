@@ -9,3 +9,48 @@
   object-fit: cover;
   display: block;
 }
+.shoe-slider {
+  width: 100%;
+  overflow: hidden;
+  padding: 25px 0;
+  background: #fff;
+}
+
+.shoe-track {
+  display: flex;
+  width: max-content;
+  gap: 20px;
+  animation: shoeScroll 25s linear infinite;
+}
+
+.shoe-slide {
+  width: 220px;
+  height: 280px;
+  flex-shrink: 0;
+  border-radius: 18px;
+  overflow: hidden;
+  background: #f5f5f5;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+  transition: transform 0.3s ease;
+}
+
+.shoe-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.shoe-slide:hover {
+  transform: scale(1.04);
+}
+
+@keyframes shoeScroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
